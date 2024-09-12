@@ -349,3 +349,13 @@ const observer = new MutationObserver(instrumentForms);
 observer.observe(document, { childList: true, subtree: true, attributeFilter: ['form'] });
 loadCSS(`${window.hlx.codeBasePath}/scripts/form-editor-support.css`);
 attachEventListners(document.querySelector('main'));
+
+function enableRuleEditorExtension() {
+  const head = document.getElementsByTagName('head')[0];
+  const meta = document.createElement('meta');
+  meta.name = 'urn:adobe:aue:config:extensions';
+  meta.content = 'https://experience.adobe.com/solutions/livecycle-ruleeditor-ui-service/static-assets/universal_editor.html';
+  head.appendChild(meta);
+}
+
+enableRuleEditorExtension();
