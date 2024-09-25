@@ -354,7 +354,7 @@ function enableRuleEditorExtension() {
   const head = document.getElementsByTagName('head')[0];
   const meta = document.createElement('meta');
   meta.name = 'urn:adobe:aue:config:extensions';
-  meta.content = 'https://experience.adobe.com/solutions/livecycle-ruleeditor-ui-service/static-assets/universal_editor.html';
+  meta.content = 'https://experience.adobe.com/solutions/livecycle-ruleeditor-ui-service/static-assets/resources/universal_editor.html';
   head.appendChild(meta);
 }
 
